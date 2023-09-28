@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpendWise - Expense Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Add a separate CSS file for custom styles -->
+  </head>
+  <body>
+    <div class="container mt-3">
+      <h1 class="text-center mb-4 text-primary">SpendWise</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Add Expense</h5>
+              <form id="expense-form">
+                <div class="mb-3">
+                  <label for="expenseName" class="form-label"
+                    >Expense Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="expenseName"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="expenseAmount" class="form-label">Amount</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="expenseAmount"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="expenseCategory" class="form-label"
+                    >Category</label
+                  >
+                  <select class="form-select" id="expenseCategory">
+                    <option value="" disabled selected>
+                      Select a category
+                    </option>
+                    <option value="Groceries">Groceries</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Dining Out">Dining Out</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Education">Education</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Gifts">Gifts</option>
+                    <option value="Home Maintenance">Home Maintenance</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Hobbies">Hobbies</option>
+                    <option value="Insurance">Insurance</option>
+                    <option value="Other">Other</option>
+                    <!-- Add more predefined categories as needed -->
+                  </select>
+                  <p style="margin-top: 10px">
+                    Please leave it if you add a new category.
+                  </p>
+                </div>
+                <div class="mb-3">
+                  <label for="newCategory" class="form-label"
+                    >New Category</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="newCategory"
+                    placeholder="Enter a new category"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Add Expense
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8 responsive-margin">
+          <h5 class="mb-3">Expense List</h5>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Expense Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="expenseList">
+              <!-- Expense items will be dynamically added here -->
+            </tbody>
+          </table>
+          <div class="mt-3 bold fw-bold">
+            <p class="alert alert-info">
+              Total Amount: <span id="totalAmount">$0.00</span>
+            </p>
+            <div id="categoryTotals">
+              <!-- Category sub-total amounts will be displayed here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

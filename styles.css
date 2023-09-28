@@ -1,0 +1,85 @@
+/* styles.css */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Apply background color and text color to the body */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Style the header with a primary color */
+h1 {
+  color: #007bff;
+}
+
+/* Add some padding to the main container */
+.container {
+  padding: 20px;
+}
+
+/* Style the "Add Expense" card */
+.card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the submit button with a primary color */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Style the table with striped rows */
+.table {
+  background-color: #fff;
+}
+
+/* Style table header with a primary color */
+.table thead th {
+  background-color: #007bff;
+  color: #fff;
+  vertical-align: middle;
+}
+
+/* Style table rows on hover */
+.table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* Add alternating background colors to table rows */
+.table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* Style category totals with different background colors */
+#categoryTotals div:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+#categoryTotals div:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.delete-icon {
+  margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .responsive-margin {
+    margin-top: 3rem;
+  }
+
+  .table thead th {
+    font-size: 14px;
+  }
+}
