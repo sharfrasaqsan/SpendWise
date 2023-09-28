@@ -83,3 +83,9 @@ h1 {
     font-size: 14px;
   }
 }
+
+@media (max-width: 480px) {
+  .delete-icon {
+    margin-left: 0.3rem;
+  }
+}
