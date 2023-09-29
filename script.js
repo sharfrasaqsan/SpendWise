@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: expenseName,
       amount: expenseAmount,
       category: expenseCategory,
+      date: new Date().toLocaleString(), // Add the current date and time
     };
 
     expenses.push(expense);
@@ -90,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <td>${expense.name}</td>
           <td>$${expense.amount.toFixed(2)}</td>
           <td>${expense.category}</td>
+          <td>${new Date().toLocaleString()}</td>
           <td>
               <i class="fas fa-edit edit-icon"></i>
               <i class="fas fa-trash-alt delete-icon"></i>
